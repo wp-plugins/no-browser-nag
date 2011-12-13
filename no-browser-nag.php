@@ -2,11 +2,11 @@
 /**
  * @package No_Browser_Nag
  * @author Scott Reilly
- * @version 1.0
+ * @version 1.0.1
  */
 /*
 Plugin Name: No Browser Nag
-Version: 1.0
+Version: 1.0.1
 Plugin URI: http://coffee2code.com/wp-plugins/no-browser-nag/
 Author: Scott Reilly
 Author URI: http://coffee2code.com
@@ -18,7 +18,7 @@ cannot upgrade in a timely fashion, or you are intentionally holding off on
 upgrading (e.g. as you wait for a bugfix release, or for browser plugins to
 update their compatibility).
 
-Compatible with WordPress 3.2+.
+Compatible with WordPress 3.2+, 3.3+.
 
 =>> Read the accompanying readme.txt file for instructions and documentation.
 =>> Also, visit the plugin's homepage for additional information and updates.
@@ -34,7 +34,7 @@ TODO:
 */
 
 /*
-Copyright (c) 2011 by Scott Reilly (aka coffee2code)
+Copyright (c) 2011-2012 by Scott Reilly (aka coffee2code)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation
 files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy,
@@ -64,6 +64,13 @@ if ( ! function_exists( 'c2c_no_browser_nag' ) ) :
 endif;
 
 if ( ! function_exists( '__return_null' ) ) :
+	/**
+	 * Returns null.
+	 *
+	 * @since 1.0
+	 *
+	 * @return null
+	 */
 	function __return_null() {
 		return null;
 	}

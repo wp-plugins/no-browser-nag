@@ -5,8 +5,8 @@ Tags: admin, browser, nag, notices, wordpress, upgrade, coffee2code
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires at least: 3.4
-Tested up to: 3.8.1
-Stable tag: 1.1
+Tested up to: 4.1
+Stable tag: 1.2
 
 Removes the browser nag that appears in the admin dashboard when using a less-than-current web browser.
 
@@ -26,7 +26,7 @@ Benefits over simply clicking "dismiss" on the browser nag notice yourself when 
 
 Of course I don't condone using an out-of-date browser. Such a browser puts your computer and data at potential risk. You are often better served with the latest version of your browser: improved security, improved performance, improved stability, and additional features. However, there are situations where you cannot upgrade in a timely fashion, or you are intentionally holding off on upgrading (e.g. as you wait for a bugfix release, or for browser plugins to update their compatibility).
 
-Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/no-browser-nag) | [Plugin Directory Page](http://wordpress.org/plugins/no-browser-nag/) | [Author Homepage](http://coffee2code.com)
+Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/no-browser-nag) | [Plugin Directory Page](https://wordpress.org/plugins/no-browser-nag/) | [Author Homepage](http://coffee2code.com)
 
 
 == Installation ==
@@ -39,7 +39,7 @@ Links: [Plugin Homepage](http://coffee2code.com/wp-plugins/no-browser-nag) | [Pl
 
 = What is this browser nag you mention? =
 
-In versions 3.2 and later of WordPress, when visiting the admin dashboard WordPress will alert you if are currently using an out-of-date version of your particular web browser.
+Since versions 3.2 of WordPress, when visiting the admin dashboard WordPress will alert you if are currently using an out-of-date version of your particular web browser.
 
 = Why would I want to remove the update nag about new releases of my browser? =
 
@@ -60,7 +60,15 @@ Clicking the "Dismiss" link at the bottom of the browser nag admin dashboard wid
 
 == Changelog ==
 
-= 1.1 =
+= 1.2 (2015-02-28) =
+* Hook 'pre_site_transient_browser_' instead of 'site_transient_browser_' to avoid unnecessary transient handling by WP
+* Reformat plugin header
+* Change documentation links to wp.org to be https
+* Note compatibility through WP 4.1+
+* Update copyright date (2015)
+* Add plugin icon
+
+= 1.1 (2014-01-30) =
 * Remove __return_null(); it has since been added to core
 * Add check to prevent execution of code if file is directly accessed
 * Re-license as GPLv2 or later (from X11)
@@ -88,6 +96,9 @@ Clicking the "Dismiss" link at the bottom of the browser nag admin dashboard wid
 
 
 == Upgrade Notice ==
+
+= 1.2 =
+Minor update: switched to short-circuit an earlier hook to prevent unnecessary code execution in WP; noted compatibility through WP 4.1+; updated copyright date (2015)
 
 = 1.1 =
 Trivial update: miscellaneous small updates; noted compatibility through WP 3.8+; dropped compatibility with version of WP older than 3.4; explicitly stated license
